@@ -1,24 +1,33 @@
 VOY_GM_Console = {}
---
-VOY_GM_Console_Version = 7
+
+--[[
+
+	Administration
+
+--]]
+
+VOY_GM_Console_Directory = "hackdata"
 
 VOY_GM_Console_UserGroups = { -- Groups that can edit what's inside the console.
-	["superadmin"] = true,
+	["user"] = true,
 }
 
-VOY_GM_Console_Perms = { -- WOS Skills that are required to hack a console. (Only use if you have alcs.)
-	["testing"] = true,
-}
+--[[
 
-VOY_GM_Console_Original = false -- Should the original person who starts the hack be the only one that can collect the Datapad?
+	Hacker Settings
 
-VOY_GM_Console_ShouldPerms = false -- Should we use the WiltOS Skills? (Only use if you have alcs.)
+--]]
 
--- Functions
-function VOY_HackCompleted(ply, entity, text) -- Player Who grabbed the Datapad, The Entity, the text the player collected.
-	-- Do stuff here
-end
+VOY_GM_Console_Original = true -- Should the original person who starts the hack be the only one that can collect the Datapad?
 
-function VOY_HackStarted(ply, entity) -- Player Who grabbed the Datapad, The Entity.
-	-- Do stuff here
-end
+VOY_GM_Console_Arrest = true -- Should we reset the hack if the hacker is arrested? (Only works with VOY_GM_Console_Original set to true.)
+
+--[[
+
+	General Console Settings
+
+--]]
+
+VOY_GM_Console_Max = 120 -- Default Max Hack Value, can be edited per console by right clicking and editing the properties.
+
+VOY_GM_Console_Model = "models/kingpommes/starwars/misc/palp_panel1.mdl" -- Default Model, can be edited per console by right clicking and editing the properties.
